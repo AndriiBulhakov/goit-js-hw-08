@@ -4,11 +4,9 @@ const lightBoxRef = document.querySelector('.js-lightbox')
 const modalImg = document.querySelector('.lightbox__image')
 const closeModalBtn = document.querySelector('.lightbox__button')
 
-
 const createGalleryItems = item => {
     const listGalleryItem = document.createElement('li')
     listGalleryItem.classList.add('gallery__item')
-
 
     const linkGalleryItem = document.createElement('a')
     linkGalleryItem.classList.add('gallery__link')
@@ -23,11 +21,10 @@ const createGalleryItems = item => {
     listGalleryItem.appendChild(linkGalleryItem)
     listGalleryItem.appendChild(imgGalleryItem)
 
-    
     ulRef.appendChild(listGalleryItem)
     return ulRef
-    
 }
+
 items.forEach(item => {createGalleryItems(item)})
 
 closeModalBtn.addEventListener('click',() => {
@@ -36,10 +33,9 @@ closeModalBtn.addEventListener('click',() => {
 })
 ulRef.addEventListener('click', onImagesClick)
  
-
 function onImagesClick(event){
   if(event.target.nodeName !== 'IMG'){
-      return
+    return
   }  
   
   lightBoxRef.classList.add('is-open')
