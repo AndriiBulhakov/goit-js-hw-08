@@ -1,4 +1,4 @@
-import items from './gallery-items.js';
+import items from './gallery-items';
 const ulRef = document.querySelector('.js-gallery')
 const lightBoxRef = document.querySelector('.js-lightbox')
 const modalImg = document.querySelector('.lightbox__image')
